@@ -1,0 +1,1 @@
+[{"templateId":"setheader","title":"Accept","parameters":{"x-ms-apimTemplateParameter.name":"Accept","x-ms-apimTemplateParameter.value":"application/json","x-ms-apimTemplateParameter.existsAction":"override","x-ms-apimTemplate-policySection":"Request"}}]
