@@ -6,7 +6,7 @@
       <LocalizedName description="Dalux Sync PowerPlatform Connector" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.3</Version>
     <Managed>0</Managed>
     <Publisher>
       <UniqueName>logiqApps</UniqueName>
@@ -78,7 +78,7 @@
       </Addresses>
     </Publisher>
     <RootComponents>
-      <RootComponent type="372" id="{f2800871-03e6-4bb2-817e-e8e65610edb0}" schemaName="la_dalux-5f47" behavior="0" />
+      <RootComponent type="372" id="{da089dbe-a8ac-4627-9ece-540f1e5bd1cc}" schemaName="la_dalux-20build-20api" behavior="0" />
     </RootComponents>
     <MissingDependencies />
   </SolutionManifest>

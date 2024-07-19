@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Connector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <connectorid>da089dbe-a8ac-4627-9ece-540f1e5bd1cc</connectorid>
+  <description>Contact Support:
+ Email: support@dalux.com</description>
+  <displayname>Dalux Build API</displayname>
+  <iconbrandcolor>#007ee5</iconbrandcolor>
+  <name>la_dalux-20build-20api</name>
+  <connectortype>1</connectortype>
+  <openapidefinition>/Connector/la_dalux-20build-20api_openapidefinition.json</openapidefinition>
+  <connectionparameters>/Connector/la_dalux-20build-20api_connectionparameters.json</connectionparameters>
+  <policytemplateinstances>/Connector/la_dalux-20build-20api_policytemplateinstances.json</policytemplateinstances>
+  <iconblob>/Connector/la_dalux-20build-20api_iconblob.Png</iconblob>
+</Connector>
