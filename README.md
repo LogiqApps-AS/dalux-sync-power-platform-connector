@@ -15,11 +15,10 @@ The latest version of the Dalux Sync Power Platform Connector can be found on [G
 ### How to build a new release?
 
 Follow these steps to manually create a new release on GitHub:
-1. Create a New Tag: Use the naming convention `v.x.x.x`, where x is a digit. For example: v.1.0.0.
-2. Determine the Build Number: The final version of the solution will be v.1.1.0.buildNumber, where `buildNumber` corresponds to `github.run_number`.
-3. Generate Artifacts: Ensure that the artifact name is automatically derived from `package/Other/Solution.xml` using the `UniqueName` attribute.
-4. Update Documentation: Make sure all relevant documentation is up-to-date with the new release details.
-5. Publish the Release: On GitHub, draft a new release, add the appropriate tag, and upload the managed and unmanaged solution files.
+1. Create a New Tag: Use the naming convention `v.x.x.x.x`, where x is a digit. For example: v.1.0.0.0
+2. Generate Artifacts: Ensure that the artifact name is automatically derived from `package/Other/Solution.xml` using the `UniqueName` attribute.
+3. Update Documentation: Make sure all relevant documentation is up-to-date with the new release details.
+4. Publish the Release: On GitHub, draft a new release, add the appropriate tag, and upload the managed and unmanaged solution files.
 
 ## 📦 Artifacts
 

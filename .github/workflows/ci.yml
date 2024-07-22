@@ -25,7 +25,7 @@ jobs:
           $minor = 0
           $patch = 0
           $build = 0
-          if ($tag -match "v(\d+)\.(\d+)\.(\d+)\.(\d+)") {
+          if ($tag -match "v.(\d+)\.(\d+)\.(\d+)\.(\d+)") {
             $major = $matches[1]
             $minor = $matches[2]
             $patch = $matches[3]
