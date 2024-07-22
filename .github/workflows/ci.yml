@@ -5,7 +5,6 @@ on:
     types: [published]
 env:
   GITHUB_TOKEN: ${{ secrets.TOKEN }}
-  buildVersion: ${{ github.run_number }}
   buildType: Release
 jobs:
   build:
@@ -22,17 +21,26 @@ jobs:
         id: parse_version
         run: |
           $tag = "${{ github.ref_name }}"
-          if ($tag -match "v.(\d+)\.(\d+)\.(\d+)") {
-            echo "##[set-output name=major;]$($matches[1])"
-            echo "##[set-output name=minor;]$($matches[2])"
-            echo "##[set-output name=patch;]$($matches[3])"
+          $major = 0
+          $minor = 0
+          $patch = 0
+          $build = 0
+          if ($tag -match "v(\d+)\.(\d+)\.(\d+)\.(\d+)") {
+            $major = $matches[1]
+            $minor = $matches[2]
+            $patch = $matches[3]
+            $build = $matches[4]
           }
+          echo "##[set-output name=major;]$major"
+          echo "##[set-output name=minor;]$minor"
+          echo "##[set-output name=patch;]$patch"
+          echo "##[set-output name=build;]$build"
         shell: pwsh
 
       - name: Update Solution Version
         id: update_version
         run: |
-          $version = "${{ steps.parse_version.outputs.major }}.${{ steps.parse_version.outputs.minor }}.${{ steps.parse_version.outputs.patch }}.${{ env.buildVersion }}"
+          $version = "${{ steps.parse_version.outputs.major }}.${{ steps.parse_version.outputs.minor }}.${{ steps.parse_version.outputs.patch }}.${{ steps.parse_version.outputs.build }}"
           Write-Host "##[set-output name=version;]$version"
           Write-Host "Current version: $version"
           $xml = [xml](Get-Content package/other/Solution.xml)
